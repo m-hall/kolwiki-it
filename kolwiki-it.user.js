@@ -14,7 +14,7 @@
  * @return {string}             A string with spaces replace with underscores
  **/
 function wikiURL(str){
-	return str.replace(/\s/g,'_').replace('%', '%25');
+	return str.replace(/\s/g, '_').replace(/%/g, '%25').replace(/"/g, '%22');
 }
 
 /**
