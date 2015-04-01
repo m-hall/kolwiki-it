@@ -98,6 +98,9 @@ function doDescPage(){
 function doItems(){
     wikiSelect('.item .effect b');
 }
+function doEffects(){
+    wikiSelect('.effect b');
+}
 function doInventory(){
     wikiSelect('.ircm');
 }
@@ -245,6 +248,7 @@ switch(window.location.pathname){
     default: // everything else
         doHeadings();
         doItems();
+        doEffects();
         break;
 }
 
