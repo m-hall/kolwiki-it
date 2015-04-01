@@ -27,7 +27,7 @@ function wikiURL(str){
 function wikiLink(urlString, textString, color){
 	return '<a href="http://kol.coldfront.net/thekolwiki/index.php/'+
 			wikiURL(urlString)+'" target="_wiki" style="color:'+
-			color+';">'+textString+'</a>';
+			color+';" class="wikilink">'+textString+'</a>';
 }
 /**
  * Modifies the content of all selected elements to become links to the wiki
@@ -89,6 +89,7 @@ function doFight(){
 function doDescPage(){
 	var name = document.querySelector('#description center b');
 	name.innerHTML = wikiLink(name.innerText, name.innerHTML, '#000');
+	document.querySelector('.wikilink').addEventListener('click', function(){ window.close() }, false);
 }
 function doItems(){
 	wikiSelect('.item .effect b');
